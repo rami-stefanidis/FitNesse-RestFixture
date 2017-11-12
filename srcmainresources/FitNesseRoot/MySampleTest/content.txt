@@ -1,0 +1,17 @@
+!contents -R2 -g -p -f -h
+!define TEST_SYSTEM {slim}
+!path target/dependencies/*.jar
+
+| Import |
+| smartrics.rest.fitnesse.fixture |
+
+|Table: Rest Fixture | http://jsonplaceholder.typicode.com/ |
+| GET |/users | 200 | Content-Type : application/json; charset=utf-8 | jsonbody.length == 10|
+
+|Table: Rest Fixture | http://jsonplaceholder.typicode.com/ |
+| GET |/users | 200 | Content-Type : application/json; charset=utf-8 | jsonbody.length == 11|
+
+
+|Table: Rest Fixture | http://localhost:8080 |
+| GET |/home | 200 | Content-Type : text/plain;charset=UTF-8 | jsonbody.length == 1|
+
