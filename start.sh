@@ -1,6 +1,5 @@
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/
-export PATH=$PATH
-LIB=/Users/ramistefanidis/IdeaProjects/RestFixture/scratch/target/dependencies
+FILEPATH=$PWD
+LIB=$FILEPATH/target/dependencies
 for i in $LIB/*.jar; do
     CLASSPATH=$CLASSPATH:$i
 done
